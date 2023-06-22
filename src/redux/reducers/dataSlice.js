@@ -10,6 +10,7 @@ export const getAllTickets = createAsyncThunk(
       if (res.statusText !== 'OK') {
         throw new Error('Server error');
       }
+
       return res.data;
     } catch (e) {
       return rejectWithValue(e.message);
@@ -23,11 +24,7 @@ const initialState = {
 const dataSlice = createSlice({
   name: 'Data',
   initialState,
-  reducers: {
-    // getTickets: (state, action) => {
-    //   state.data = action.payload;
-    // },
-  },
+  reducers: {},
   extraReducers: {
     [getAllTickets.rejected]: (state, action) => {
       state.error = action.payload;
@@ -43,5 +40,4 @@ const dataSlice = createSlice({
   },
 });
 
-// export const { getTickets } = dataSlice.actions;
 export default dataSlice.reducer;

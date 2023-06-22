@@ -1,11 +1,11 @@
 import React from 'react';
 import { changeFilter } from '../../../redux/reducers/filterSlice';
 import './transplants.scss';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 
 export const Transplants = () => {
   const dispatch = useDispatch();
-  const checkbox = ['All', 'Non stop', '1 пересадка', '2 пересадка', '3 пересадка'];
+  const checkbox = ['All', '0', '1', '2', '3'];
   return (
     <div className="transplants">
       <div className="transplants__title">Количество пересадок</div>
@@ -20,7 +20,13 @@ export const Transplants = () => {
               id={item}
             />
             <label className="transplants__input-lbl" for={item}>
-              {item}
+              {item === '1'
+                ? `${item} пересадка`
+                : `${item} пересадки` && item === '0'
+                ? 'Без пересадок'
+                : `${item} пересадки` && item === 'All'
+                ? 'Все билеты'
+                : `${item} пересадки`}
             </label>
           </div>
         ))}
