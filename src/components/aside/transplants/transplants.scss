@@ -1,0 +1,26 @@
+.transplants {
+  .transplants__title {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 64px;
+    color: #1c3554;
+  }
+  .transplants__input-wrapper {
+    display: flex;
+    flex-direction: column;
+    .transplants__input-all {
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+      .transplants__input-lbl {
+        font-family: 'Montserrat';
+        font-size: 20px;
+        line-height: 32px;
+        font-size: 700;
+        cursor: pointer;
+      }
+    }
+  }
+}

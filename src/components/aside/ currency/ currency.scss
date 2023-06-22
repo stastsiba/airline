@@ -1,0 +1,29 @@
+.currensy__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  .currensy__title {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 64px;
+    color: #1c3554;
+  }
+  .currensy__button-wrapper {
+    .currensy__button-rub,
+    .currensy__button-usd,
+    .currensy__button-eur {
+      border-style: none;
+      padding: 10px 25px;
+      background: #fff;
+      border-radius: 8px;
+      font-family: 'Montserrat';
+      font-size: 16px;
+      line-height: 32px;
+      color: #0000ff;
+      cursor: pointer;
+      border: 1px solid gray;
+    }
+  }
+}
