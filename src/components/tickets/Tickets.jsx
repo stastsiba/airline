@@ -20,8 +20,8 @@ export const Tickets = () => {
       ) : (
         data
           .filter((elem) => (filter === 'All' ? elem : String(elem.stops) === filter))
-          .map((item) => (
-            <div className="tickets__wrapper">
+          .map((item, idx) => (
+            <div key={idx} className="tickets__wrapper">
               <div className="tickets__logo-wrapper">
                 <img className="tickets__logo" src="image/logoAir.png" alt="Photo" />
                 <button className="tickets__btn">

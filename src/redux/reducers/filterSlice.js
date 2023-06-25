@@ -1,5 +1,4 @@
 import { createSlice } from '@reduxjs/toolkit';
-import _default from 'react-redux/es/components/connect';
 
 const initialState = {
   filter: 'All',

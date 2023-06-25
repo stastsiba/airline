@@ -7,8 +7,10 @@ export const Currency = () => {
     <div className="currensy__wrapper">
       <div className="currensy__title">Валюта</div>
       <div className="currensy__button-wrapper">
-        {currencyBtn.map((item) => (
-          <button className="currensy__button-rub">{item}</button>
+        {currencyBtn.map((item, i) => (
+          <button key={i} className="currensy__button-rub">
+            {item}
+          </button>
         ))}
       </div>
     </div>
